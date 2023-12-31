@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hiii welcome. You have <%= ejscounter %> blogs.
+    </h1>
+    <h2>Wanna create one</h2>
+    <form action="" method="post">
+        <button type="submit" formaction="/blog" >Create new</button>
+    </form>
+   
+
+    <!-- code to display the blogs created -->
+    <div id="flex">
+        <% if (ejscounter>0) { %>
+            <% for(var i =0 ;i<ejsaryan.length;i++){ %>
+                <div id="blog-div">
+                    <p id="blog-title"><%= ejsaryan[i].title%></p>
+                    <p id="blog-details"><%= ejsaryan[i].details %> </p>
+                </div>
+            <%}%>
+        <% } %>
+    </div>
+   
+</body>
+</html>
